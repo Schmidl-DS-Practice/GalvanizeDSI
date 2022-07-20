@@ -1,0 +1,30 @@
+docker work flow for pgserv/sql:
+
+docker start pgserv
+docker exec -it pgserv bash
+cd into correct folder
+psql -U postgres
+CREATE DATABASE pets_db;
+\q
+psql -U postgres pets_db < pets.sql
+psql -U postgres pets_db
+\d
+
+'commence writing queries'
+
+(INNER) JOIN: Discards any entries that do not have
+match between the keys specified in the ON clause. No
+null/nan values.
+
+LEFT (OUTER) JOIN: Keeps all entries in the left (FROM)
+table, regardless of whether any matches are found in the
+right (JOIN) tables. Some null/nan values.
+    
+    RIGHT (OUTER) JOIN: Is the same, except keeps all entries in the
+    right (JOIN) table instead of the left (FROM) table); usually avoided
+    because it does the same thing as a LEFT join
+    
+FULL (OUTER) JOIN: Keeps the rows in both tables no
+matter what. More null/nan values.
+
+

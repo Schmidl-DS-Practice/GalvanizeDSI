@@ -1,0 +1,49 @@
+docker exec -it pgserv bash
+CREATE USER ender WITH ENCRYPTED PASSWORD 'bugger';
+CREATE DATABASE golf WITH OWNER ender;
+\q
+
+Now type the following commands in postgres (indicated by being prefaced with #).
+
+CREATE USER ender WITH ENCRYPTED PASSWORD 'bugger';
+CREATE DATABASE golf WITH OWNER ender;
+
+import psycopg2
+import getpass
+upass = getpass.getpass()
+conn = psycopg2.connect(database="golf", user="ender", password=upass, host="localhost", port="5432")
+
+cur = conn.cursor()
+query = '''
+        SELECT *
+        FROM golf
+        LIMIT 30;
+        '''
+cur.execute(query)
+cur.fetchone()
+cur.fetchmany(5)
+results = cur.fetchall() #(can only look at data once, so might not return the entire query)
+conn.commit() # commits whatever changed you made to the database
+conn.rollback() # rollsback (undo) present pending transaction
+conn.close() # closes the connection
+
+REVIEW:
+### Connections must be established using an existing database, username, database IP/URL, and maybe passwords
+
+### If you have no created databases, you can connect to Postgres using the dbname 'postgres' to initialize db commands
+
+### Data changes are not actually stored until you choose to commit. This can be done either through conn.commit() or setting autocommit = True. Until commited, all transactions is only temporary stored.
+
+### Autocommit = True is necessary to do database commands like CREATE DATABASE. This is because Postgres does not have temporary transactions at the database level.
+
+### If you ever need to build similar pipelines for other forms of database, there are libraries such PyODBC which operate very similarly.
+
+### SQL connection databases utilizes cursors for data traversal and retrieval. This is kind of like an iterator in Python.
+
+### Cursor operations typically goes like the following: execute a query, fetch rows from query result if it is a SELECT query, because it is iterative, previously fetched rows can only be fetched again by rerunning the query, close cursor through .close()
+
+### Cursors and Connections must be closed using .close() or else Postgres will lock certain operation on the database/tables until the connection is severed.
+
+
+
+

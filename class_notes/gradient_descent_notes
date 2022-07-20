@@ -1,0 +1,13 @@
+objective function in machine learning:
+    linear regression:(see notebook) 1/N x sum of (yi, true values - predicated values of y, which is y_hat)**2 from 1 to N
+                       
+    logistic regression:(see notebook) max likelihood: sum of (positive class and negative class) from 1 to N involves natural log. if yi is 1 then first term stays and second term goes away. if yi is 0 then first term goes away and second term stays.
+    
+steps for gradient descent:
+1)compute gradient of cost function
+2)adjust weights/parameters by the gradient of the cost function scaled by the learning rate
+3)computer objective function, a.k.a the cost function
+4)check for convergence
+
+                                         
+    

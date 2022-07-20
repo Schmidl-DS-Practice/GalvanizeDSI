@@ -1,0 +1,27 @@
+to run keras:
+
+first time:
+$ cd ~
+$ docker run -it --name tensorflow -p 8888:8888 -v "$PWD":/tf tensorflow/tensorflow:2.0.0a0-py3-jupyter
+
+will see this print out:
+        ...
+        To access the notebook, open this file in a browser:
+            file:///root/.local/share/jupyter/runtime/nbserver-10-open.html
+        Or copy and paste one of these URLs:
+            http://(ae4038ed94a3 or 127.0.0.1):8888/?token=e305929f1dca3ae69707f9a67d6467bd92ce3c1d6521919c
+            
+things after 'token=' are a password required to access notebook   
+         
+Go to http://localhost:8888
+
+to re-run if closed:
+$ docker run -h tensorflow -p 8888:8888 -v "$PWD":/tf tensorflow/tensorflow:2.0.0a0-py3-jupyter
+
+access tensorflow container from command line:
+docker exec -it tensorflow /bin/bash
+
+
+          
+            
+

@@ -1,0 +1,28 @@
+Classes
+    - Polynomial
+
+Methods
+    Part 1
+        __init__
+        __repr__
+
+    Part 2
+        evaluate
+    
+    Part 3
+        __add__
+        __sub__
+        __neg__
+    
+    Part 4
+        __eq__
+
+    Part 5
+        __str__
+
+    Part 6
+        __mul__
+
+    Part 7
+        differentiate
+        integrate

@@ -1,0 +1,62 @@
+https://cs231n.github.io/convolutional-networks/
+
+cnn architecture overview:
+
+image kernel: small matrix used to apply effects like you might find in Photoshop or Gimp, such as blurring, sharpening, etc. They're used in machine learning for 'feature
+extraction', a technique for determining the most important portions of
+an image. In this context the process is referred to more generally as
+CONVOLUTION”.
+
+https://setosa.io/ev/image-kernels/
+
+Convolve the filter with the image i.e. slide the filter over the image, in the process computing the sum of the element-wise products. Filters always extend the full depth of the input volume.
+
+1 number:
+the result of taking the sum of the element-wise
+products between the 5x5x3 filter and a 5x5x3
+chunk of the image and then adding a bias
+
+input image
+1 1 1 1 1   filter  result 
+0 1 1 1 1   1 1 1   9 11 12     
+0 0 1 1 1 * 1 4 1 = 3  9 11  
+0 0 0 1 1   1 1 1   1  3  9
+0 0 0 0 1                     
+
+ConvNet is a sequence of Convolution Layers, interspersed with activation functions
+stride is how many units to move filter. must end on the final column
+output size = (N-F)/stride+1
+N - height/width of image
+F - height/width of filter
+
+CNN Hyperparameters:
+accepts these: width, height, depth
+number of filter, K
+their spatial extent, F
+stride, S
+amount of zero padding, P
+
+    Common settings:
+    K = (powers of 2)
+    - F = 3, S = 1, P = 1
+    - F = 5, S = 1, P = 2
+    - F = 5, S = 2, P = ? (whatever fits)
+    - F = 1, S = 1, P = 0
+
+pooling layer hyperparameters:
+accepts these: width, height, depth
+spatial exten, F
+stride, S
+type of pooling
+
+    Common settings:
+    F = 2, S = 2, Max
+    F = 3, S = 2, Max
+   
+
+
+
+
+
+
+

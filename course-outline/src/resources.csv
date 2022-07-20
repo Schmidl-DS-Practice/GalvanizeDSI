@@ -1,0 +1,233 @@
+# Resources/readings to go into assignment
+# Each resource must be associated with a repo (including a % repo if not an actual github repository).
+# If the 3th field is in books.csv, the link from there will be substituted.
+# The 4th field is optional; if present will be added after the desciptions, outside of the link.
+# Commas are allowed in the 4th field ONLY
+
+git-intro, Git Remote, https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+git-intro, Development Workflow, notes/workflow.md
+git-intro, Pair Programming, notes/pairing.md
+git-intro, Git Quick Reference, quick-reference/Git.pdf
+
+unix, Unix Tutorial, http://www.ee.surrey.ac.uk/Teaching/Unix/
+unix, Unix for Data Science, http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/
+unix, Unix Philosophy, https://en.wikipedia.org/wiki/Unix_philosophy
+
+python-intro, Python code style, https://docs.python-guide.org/writing/style/#general-concepts 
+python-intro, A Quick Tour of IPython Notebook, https://nbviewer.jupyter.org/github/jvns/pandas-cookbook/blob/master/cookbook/A%20quick%20tour%20of%20IPython%20Notebook.ipynb, Extra
+python-intro, A Taxonomy of Data Science, http://www.dataists.com/2010/09/a-taxonomy-of-data-science/, Extra
+
+oop, Classes and objects, http://www.greenteapress.com/thinkpython/html/thinkpython016.html
+
+linear-algebra, Linear Algebra Review and Reference, http://cs229.stanford.edu/section/cs229-linalg.pdf, Reference
+linear-algebra, Linear Algebra for Deep Learning, http://www.deeplearningbook.org/contents/linear_algebra.html, 2.1–2.7
+linear-algebra, Linear Algebra (precourse), https://learn-2.galvanize.com/cohorts/1984/blocks/16/content_files/units/linear-algebra1/overview.md
+
+numpy, Numpy Reading, notes/reading_material/numpy_reading.md
+
+pandas, 10 Minutes to Pandas, https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
+pandas, Pandas Top 10, http://manishamde.github.io/blog/2013/03/07/pandas-and-python-top-10/
+pandas, EDA with Pandas, http://nbviewer.ipython.org/github/cs109/content/blob/master/labs/lab3/lab3full.ipynb, Extra
+pandas, Data Wranging with Pandas, http://nbviewer.ipython.org/github/cs109/content/blob/master/lec_04_wrangling.ipynb, Extra
+
+matplotlib, Less is More, http://www.randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/
+matplotlib, Matplotlib Tutorial 1, https://www.stat.berkeley.edu/~nelle/teaching/2017-visualization/README.html
+matplotlib, Matplotlib Tutorial 2, https://matplotlib.org/users/artists.html
+
+pandas-eda-case-study, What is EDA?, https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm
+pandas-eda-case-study, Capstone 1 Example: Denver Auto Accidents, https://github.com/johnherr/Traffic-Accidents-in-Denver
+pandas-eda-case-study, Capstone 1 Example: Service Provisions by Non-state Actors, https://github.com/gagejane/Terrorism-NonViolent
+
+probability-distributions, Review of Probability Theory, http://cs229.stanford.edu/section/cs229-prob.pdf
+probability-distributions, Basic Probability, https://seeing-theory.brown.edu/basic-probability/index.html
+
+binomial-tests, Binomial Distribution and Test, https://www.youtube.com/watch?v=J8jNoF-K8E8
+
+sampling-distributions, Bootstrapping Intro, https://www.youtube.com/watch?v=_nhgHjdLE-I
+sampling-distributions, Frequentist Inference, https://seeing-theory.brown.edu/frequentist-inference/index.html
+
+law-of-large-numbers, Law of Large Numbers, https://en.wikipedia.org/wiki/Law_of_large_numbers
+
+central-limit-theorem, The Central Limit Theorem, https://www.youtube.com/watch?v=YAlJCEDH2uY
+central-limit-theorem, Central Limit Theorem, https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/sampling-distribution-mean/v/central-limit-theorem
+
+maximum-likelihood, MLE, https://www.youtube.com/watch?v=I_dhPETvll8
+maximum-likelihood, Maximum Likelihood, https://www.youtube.com/watch?v=XepXtl9YKwc
+maximum-likelihood, Maximum Likelihood for Normal Distribution, https://www.youtube.com/watch?v=Dn6b9fCIUpM, Optional
+
+hypothesis-testing, z-test VS t-test, https://www.youtube.com/watch?v=5ABpqVSx33I
+hypothesis-testing, Hypothesis Testing, https://www.youtube.com/watch?v=-FtlH4svqx4
+
+statistical-power, Power Analysis, https://www.youtube.com/watch?v=lHI5oEgNkrk
+
+bayes-intro, Bayesian Intuition, https://www.youtube.com/watch?v=HZGCoVF3YvM
+bayes-testing, Introduction to Bayesian statistics part I, https://mathcs.clarku.edu/~djoyce/ma218/bayes1.pdf
+bayes-testing, Introduction to Bayesian statistics part II, https://mathcs.clarku.edu/~djoyce/ma218/bayes2.pdf
+
+docker, Getting Started with Docker, https://docs.docker.com/get-started/, wait to install until class
+
+aws, AWS setup, https://github.com/GalvanizeDataScience/unix/blob/master/setup_aws.md
+aws, Getting Started with AWS, https://aws.amazon.com/start-now/
+aws, About AWS, https://aws.amazon.com/about-aws/
+
+sql, SQL Zoo, http://sqlzoo.net/wiki/Main_Page, tutorial 1–9
+sql, Visual Explanation of Joins, http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
+
+web-scraping, Little book of MongoDB, http://openmymind.net/mongodb.pdf
+web-scraping, Basic Web Scaping, https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe
+web-scraping, Web Scraping Using BeautifulSoup, https://www.dataquest.io/blog/web-scraping-tutorial-python/
+
+algorithmic-complexity, Introduction to Algorithms, Algorithms, Chapter 2 pg 16–42
+
+spark-rdds, Learning Spark, Spark, pg 1–22
+spark-rdds, Learning Spark, Spark, ch 11; Optional
+
+mock-interview-questions, Capstone guide, ./notes/capstones.md
+
+knn, K-Nearest Neighbors, ISLR, pg 39–42, 104–109
+knn, Classifying with k-Nearest Neighbors, MLIA, Section 2.1
+knn, KNN (Learn), https://learn-2.galvanize.com/cohorts/%cohortid%/blocks/244/content_files/knn/README.md
+
+
+cross-validation, The Bias-Variance Trade-Off, ISLR, 2.2.2
+cross-validation, Cross Validation, ISLR, 5–5.1.4
+cross-validation, Bias-Variance (Learn), https://learn-2.galvanize.com/cohorts/%cohortid%/blocks/244/content_files/bias-variance/readme.md
+cross-validation, Cross Validation (Learn), https://learn-2.galvanize.com/cohorts/%cohortid%/blocks/244/content_files/cross-validation/readme.md
+
+linear-regression-eda, Linear Regression, ISLR, 3.3–3.4
+
+inferential-linear-regression, Practical Regression, https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf
+
+regularized-regression, Regularization, ISLR, 6-6.1 pg 203–214, Optional
+regularized-regression, Shrinkage Methods, ISLR, 6.2 pg 214–228
+regularized-regression, Regularization (Learn), https://learn-2.galvanize.com/cohorts/%cohortid%/blocks/244/content_files/regularized-regression/readme.md
+
+logistic-regression, Logistic Regression, MLIA, Chapter 5 pg 83–90
+logistic-regression, Logistic Regression, ISLR, pg 127–137
+
+gradient-descent, Andrew Ng notes, Ng, 1–7, 16–19
+decision-trees, Recursion, https://runestone.academy/runestone/books/published/pythonds/Recursion/toctree.html
+decision-trees, Recursion, https://github.com/GalvanizeDataScience/welcome/tree/master/readings/recursion
+decision-trees, Visual Introduction to Decision Trees, http://www.r2d3.us/visual-intro-to-machine-learning-part-1/
+decision-trees, Decision Trees, MLIA, 3–3.1 pg 37–48
+decision-trees, Decision Trees (Learn), https://learn-2.galvanize.com/cohorts/%cohortid%/blocks/244/content_files/dec_tree/README.md
+
+random-forests-application, Ensembles, ISLR, 8.2 pg 316–321
+
+gradient-boosted-regression, Boosting, ISLR, 8.2.3 pg 321–323
+gradient-boosted-regression, Boosting Methods, ESL, 10–10.6 pg 337–350, Optional
+
+perceptrons, Neural Networks Demystified, https://www.youtube.com/watch?v=bxe2T-V8XRs, Parts 1–7
+perceptrons, What is a Neural Network, https://www.youtube.com/watch?v=aircAruvnKk, Parts 1 and 2
+perceptrons, Neural networks and deep learning with Torch, https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/, Lecture 9
+recurrent-neural-nets, The Unreasonable Effectiveness of Recurrent Neural Networks, http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+recurrent-neural-nets, Understanding LSTM Networks, https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+clustering, Clustering, ISLR, pg 385–400
+image-processing, Digital Image Processing Basics, https://www.geeksforgeeks.org/digital-image-processing-basics/
+convolutional-neural-nets, Convolutional Neural Networks, https://cs231n.github.io/convolutional-networks/
+convolutional-neural-nets, Intuitive Explanation of CNNs, https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
+
+
+nlp, Text Feature Extraction I, http://blog.christianperone.com/?p=1589
+nlp, Text Feature Extraction II, http://blog.christianperone.com/?p=1747
+nlp, Text Feature Extraction III, http://blog.christianperone.com/?p=2497
+nlp, NLP, NLP, Sections 1.1–1.7
+nlp, NLP in Python, http://www.datascienceassn.org/sites/default/files/Natural%20Language%20Processing%20with%20Python.pdf, 3.6 pg 107–108
+nlp, Scalability of Semantic Analysis in NLP, https://radimrehurek.com/phd_rehurek.pdf, Sections 1.1–1.7
+
+pca, PCA, ISLR, ch 10.2 pg 374–385
+pca, PCA Explained Visually, https://setosa.io/ev/principal-component-analysis/
+
+svd, SVD, MMD, ch 11
+
+topic-modeling, The why and how of NMF, https://blog.acolyer.org/2019/02/18/the-why-and-how-of-nonnegative-matrix-factorization/
+topic-modeling, NMF: A Simple Tutorial in Python, http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
+
+flask, Flask, http://flask.pocoo.org/
+flask, Flask Tutorial, http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+flask, HTTP Methods, http://www.w3schools.com/tags/ref_httpmethods.asp
+
+graphs-searching, Social Network Analysis, SNA, ch 2 pg 19–38
+graphs-searching, Graphs, MMD, ch 10.1–10.2 pg 343–356
+
+time-series, Introduction to Time Series Analysis, https://algorithmia.com/blog/introduction-to-time-series
+time-series, Forecasting: principles and practice, https://otexts.com/fpp2/, ch 1, 2, & 6–8
+time-series, Time Series Analysis and its Applications, https://www.stat.pitt.edu/stoffer/tsa4/tsa4.pdf, ch 1–3
+time-series, ARIMA Models in Python, http://conference.scipy.org/proceedings/scipy2011/pdfs/statsmodels.pdf
+
+latent-dirichlet-allocation, Guide to LDA, https://medium.com/@lettier/how-does-lda-work-ill-explain-using-emoji-108abf40fa7d
+
+content-based-recommenders, Content-Based Recommenders, MMD, ch 9.1–9.2 pg 307–320
+similarity-based-recommenders, Collaborative filtering, MMD, ch 9.3 pg 320–327
+similarity-based-recommenders, Collaborative filtering–based recommendation engines, MLIA, 14.4-14.5 pg 286–295
+factorization-recommenders, Dimensionality Reductions, MMD, ch 9.4–9.5 pg 328–340)
+
+factorization-recommenders, Matrix Factorization Techniques, https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf
+
+transfer-learning, Gentle Introduction to Transfer Learning, https://machinelearningmastery.com/transfer-learning-for-deep-learning/
+multi-armed-bandit, Multi-armed bandit, http://stevehanov.ca/blog/index.php?id=132
+
+autoencoders, Autoencoders, http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/
+transfer-learning, Transfer Learning, https://machinelearningmastery.com/transfer-learning-for-deep-learning/
+
+$
+
+<!-- Week 4 -->
+[r-mlia]:https://drive.google.com/file/d/0B1cm3fV8cnJwcUNWWnFaRWgwTDA/view?usp=sharing
+[r-islr]:http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf
+[r-prac-reg]:https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf
+
+
+
+<!-- Week 7 --> 
+[r-recursion]:http://interactivepython.org/runestone/static/pythonds/index.html#recursion
+[r-recu-prac]:https://github.com/gSchool/dsi-welcome/blob/19-01-DS-SF-g88/readings/recursion
+[r-dec-tree-visual]:http://www.r2d3.us/visual-intro-to-machine-learning-part-1/
+[r-esl]:https://web.stanford.edu/~hastie/ElemStatLearn/download.html
+[r-nn]:https://www.youtube.com/watch?v=bxe2T-V8XRs
+[r-ng-note]:http://cs229.stanford.edu/notes/cs229-notes1.pdf
+
+
+<!-- Week 8 -->
+[r-tfe-1]:http://blog.christianperone.com/?p=1589
+[r-tfe-2]:http://blog.christianperone.com/?p=1747
+[r-tfe-3]:http://blog.christianperone.com/?p=2497
+[r-sem-ana]:https://radimrehurek.com/phd_rehurek.pdf
+[r-nlp]:http://www.datascienceassn.org/sites/default/files/Natural%20Language%20Processing%20with%20Python.pdf
+[r-mmd]:http://infolab.stanford.edu/~ullman/mmds/book.pdf
+[r-nmf-py]:http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
+[r-sna]:http://www.asecib.ase.ro/mps/Social%20Network%20Analysis%20for%20Startups%20[2011].pdf
+
+
+<!-- Week 9-->
+[r-mab]:http://stevehanov.ca/blog/index.php?id=132
+
+<!-- Week 10-->
+[r-forecasting]:https://www.otexts.org/fpp
+[r-time-series]:https://github.com/GalvanizeDataScience/course-outline/blob/19-02-DS-SF-g92/notes/TimeSeries.pdf
+[r-arima]:http://conference.scipy.org/proceedings/scipy2011/pdfs/statsmodels.pdf
+[r-matrix-recom]:https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf
+[r-graphlab]:https://turi.com/learn/userguide/recommender/choosing-a-model.html
+
+<!-- Week 11-->
+[r-autoencoder]:http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/
+[r-word-embedding]:https://arxiv.org/pdf/1301.3781.pdf
+[r-convnets]:https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
+[r-transfer]:https://machinelearningmastery.com/transfer-learning-for-deep-learning/
+[r-flask]:http://flask.pocoo.org/
+[r-flask-tutorials]:http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+[r-get-post]:http://www.w3schools.com/tags/ref_httpmethods.asp
+
+<!-- Week 13-->
+[r-120-Qs]:https://github.com/GalvanizeDataScience/course-outline/blob/19-02-DS-SF-g92/interview-prep/120_Interview_Questions.pdf
+[r-takehome]:https://github.com/GalvanizeDataScience/course-outline/blob/19-02-DS-SF-g92/interview-prep/takehome/take-home-guide.md
+[r-model-comp]:https://github.com/GalvanizeDataScience/course-outline/blob/19-02-DS-SF-g92/interview-prep/review/Model_Comparison_Guide.md
+[r-business]:https://github.com/GalvanizeDataScience/course-outline/blob/19-02-DS-SF-g92/interview-prep/business/business_analytics_reading.md
+[polya]:https://math.berkeley.edu/~gmelvin/polya.pdf
+
+
+
+[r-multiproc]:https://www.youtube.com/watch?v=X2mO1O5Nuwg
+[r-intro-parallel]:http://sebastianraschka.com/Articles/2014_multiprocessing.html
+[r-intro-threading]:http://pymotw.com/2/threading/

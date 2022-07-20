@@ -1,0 +1,28 @@
+Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
+
+Unsupervised learning is a type of self-organized ... learning that helps find previously unknown patterns in data set without pre-existing label
+
+parametric algorithm:
+                      -has a fixed number of parameters
+                      -makes assumptions about the structure of the data
+                      -will work well if the assumptions are correct!
+                      -common examples: linear regression, neural networks, statistical
+                          distributions defined by a finite set of parameters
+
+non-parametric algorithm:
+                          -uses a flexible number of parameters, and the number of parameters
+                              often grows as it learns from more data.
+                          -makes fewer assumptions about the data
+                          -common examples: K-Nearest Neighbors, decision trees
+                          
+one predictor:
+                Y = Bo + B1X + e                          
+> one predictor:
+                Y = BoXo + B1X1 + B2X2 + ... + BpXp + e
+                
+B = (X**T(.)X)**-1(.)X**T(.)y
+(.) = dot product of matrices   
+
+y = B1(.)X where Bo = zero                   
+
+

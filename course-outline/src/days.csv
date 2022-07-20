@@ -1,0 +1,97 @@
+# Weeks descriptions start with a !, comments with a #
+# All other non-blank lines are a date followed by zero or more repos
+# Repo names are used for both assignments and lectues (these must be the same)
+# "Repo" names starting with % are included as strings without links in the Repos column
+#   and not in the Lecture Matierials columns
+# Descriptions are taken from descriptions.csv, readings from resources.csv
+
+!Week 1: Programming for Data Science
+Monday 6/29, %[Readiness Assessment](https://learn-2.galvanize.com/cohorts/%cohortid%), unix, git-intro
+Tuesday 6/30, python-intro, oop
+Wednesday 7/1, linear-algebra, numpy
+Thursday 7/2, pandas, matplotlib
+Friday 7/3, weekly-student-led-review, feature-branch-git-workflow, pandas-eda-case-study, %Holiday (Independence Day)
+
+!Week 2: Statistics
+Monday 7/6, %[Assessment 1](https://learn-2.galvanize.com/cohorts/%cohortid%), probability-distributions, binomial-tests
+Tuesday 7/7, sampling-distributions, law-of-large-numbers
+Wednesday 7/8, central-limit-theorem, maximum-likelihood
+Thursday 7/9, hypothesis-testing, statistical-power
+Friday 7/10, weekly-student-led-review, bayes-intro, bayes-testing
+
+!Week 3: Big Data
+Monday 7/13, %[Assessment 2](https://learn-2.galvanize.com/cohorts/%cohortid%), docker, aws
+Tuesday 7/14, sql, sql-python
+Wednesday 7/15, algorithmic-complexity, web-scraping
+Thursday 7/16, spark-rdds, spark-dfs
+Friday 7/17, weekly-student-led-review, spark-case-study
+
+!Week 4: Unit 1 Capstone
+Monday 7/20, %[Assessment 3](https://learn-2.galvanize.com/cohorts/%cohortid%), %Begin Capstone 1, mock-interview-questions
+Tuesday 7/21, mock-interview-questions
+Wednesday 7/22, mock-interview-questions
+Thursday 7/23, mock-interview-questions
+Friday 7/24,, %Presentation in afternoon
+
+!Week 5: Supervised Learning and Regression
+Monday 7/27, knn, cross-validation
+Tuesday 7/28, linear-regression-eda, predictive-linear-regression
+Wednesday 7/29, regularized-regression, logistic-regression
+Thursday 7/30, gradient-descent, decision-rules
+Friday 7/31, weekly-student-led-review, regression-case-study
+
+!Week 6: Nonlinear Supervised Learning
+Monday 8/3, %[Assessment 4](https://learn-2.galvanize.com/cohorts/%cohortid%), time-series, decision-trees
+Tuesday 8/4, random-forests-implementation, random-forests-application
+Wednesday 8/5, boosting-implementation, gradient-boosted-regression
+Thursday 8/6, perceptrons, recurrent-neural-nets
+Friday 8/7, weekly-student-led-review, supervised-learning-case-study
+
+!Solo Week
+Monday 8/10, %Relax and review and work on Capstone 2
+Tuesday 8/11,
+Wednesday 8/12,
+Thursday 8/13,
+Friday 8/14,
+
+!Week 7: NLP and Unsupervised Learning
+Monday 8/17, %[Assessment 5](https://learn-2.galvanize.com/cohorts/%cohortid%), image-processing, convolutional-neural-nets
+Tuesday 8/18, nlp, text-classification
+Wednesday 8/19, clustering, pca
+Thursday 8/20, svd, topic-modeling
+Friday 8/21, weekly-student-led-review, nlp-case-study
+
+!Week 8: Unit 2 Capstone
+Monday 8/24, %[Assessment 6](https://learn-2.galvanize.com/cohorts/%cohortid%), %Begin Capstone 2, mock-interview-questions
+Tuesday 8/25, mock-interview-questions
+Wednesday 8/26, mock-interview-questions
+Thursday 8/27, mock-interview-questions
+Friday 8/28, %Presentation in afternoon
+
+!Week 9: Advanced Topics 1
+Monday 8/31, flask, graphs-searching
+Tuesday 9/1, time-series-arima, latent-dirichlet-allocation
+Wednesday 9/2, content-based-recommenders, similarity-based-recommenders
+Thursday 9/3, factorization-recommenders, recommender-case-study
+Friday 9/4, recommender-case-study
+
+!Week 10: Advanced Topics 2
+Monday 9/7, %Holiday (Labor Day)
+Tuesday 9/8, autoencoders, transfer-learning
+Wednesday 9/9, multi-armed-bandit, reinforcement-learning-with-nn
+Thursday 9/10, fraud-detection-case-study
+Friday 9/11, fraud-detection-case-study
+
+!Week 11: Unit 3 Capstone
+Monday 9/14, %Begin Capstone 3, mock-interview-questions
+Tuesday 9/15, mock-interview-questions
+Wednesday 9/16, mock-interview-questions
+Thursday 9/17, mock-interview-questions
+Friday 9/18, mock-interview-questions
+
+!Week 12: Showcase
+Monday 9/21,
+Tuesday 9/22,
+Wednesday 9/23,
+Thursday 9/24, %Demo Day
+Friday 9/25, %Graduation

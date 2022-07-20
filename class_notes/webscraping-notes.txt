@@ -1,0 +1,38 @@
+to work in python:
+
+from urllib.request import urlopen
+
+
+url = "http://www.example.com"
+fp = urlopen(url)
+contents = fp.read()
+contents
+
+decoded_contents = contents.decode()
+decoded_contents
+
+start = decoded_contents.find("<title>")
+end = decoded_contents.find("</title>")
+decoded_contents[start+len("<title>"):end]
+
+import requests
+url = 'http://www.example.com'
+r  = requests.get(url)
+r.status_code
+r.text
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(response_html, 'html.parser')
+soup.title # find a single child element
+soup.title.text # Or we can just return the text
+soup.html.head.title.text # There are many ways to get to the same element
+soup.body # find a single child element; it may contain its own children
+bodytext = soup.body.text # strips away markup from all children of a tag
+soup.body.a # use attribute notation to get a child of a child
+p_elements = soup.find_all('p')# find all children with a particular tag
+element = p_elements[1]# get the second element from our list
+element.a
+element.a.attrs# this is a dictionary
+element.a.attrs['href'] #https://www.iana.org/domains/example
+
+jupyter notebook scraping.ipynb ^is above better example. clean up notes and add better example

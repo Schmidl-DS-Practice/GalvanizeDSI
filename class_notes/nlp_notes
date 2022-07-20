@@ -1,0 +1,49 @@
+Natural-language processing (NLP) is an area of computer science and artificial intelligence concerned with the interactions between computers and human languages. In particular: how to program computers to fruitfully process large amounts of natural language data?
+
+see tf_idf_notes
+
+Phonetics & Phonology (linguistic sounds)
+
+Morphology (meaningful components of words)
+
+Semantics (meaning)
+
+Pragmatics (meaning with respect to goals and intentions)
+
+Discourse (linguistic units larger than a single utterance)
+
+For many machine-learning applications we want text & dialogue that makes
+sense (has semantic meaning), but many of our tools get more at syntax (syntactic meaning).
+
+corpus: A collection of documents. Usually each row in the corpus is a
+document. (So each row in your X matrix is usually a document).
+
+stop-words: Domain-specific words that are so common that they are not
+expected to help differentiate documents. sklearn’s stop-words list.
+
+tokens: What documents are made of, and the columns in your X matrix. You’d
+think tokens are words (and you’re right), but tokens are words that have been
+either stemmed or lemmatized to their root form: car, cars, car’s, cars’ ⇒ car
+
+n-grams: How many tokens constitute a linguistic unit in the analysis?
+● boy (n-gram = 1), little boy (n-gram=2), little boy blue (n-gram=3)
+
+bag-of-words: A document is represented numerically by the set of its tokens, not preserving order and nearby tokens but preserving counts (frequency).
+
+NLP text processing workflow:
+
+1. Lowercase all your text (unless for some words that are Part-Of-Speech(POS)
+the capitalization you decide is important.)
+
+2. Strip out miscellaneous spacing and punctuation.
+
+3. Remove stop words (careful they may be domain or use-case specific).
+
+4. Stem or lemmatize the text into tokens.
+
+5. Convert text to numbers using a bag-of-words model and a term-frequency,
+inverse document frequency matrix (more later).
+
+6. Train / cluster your data in a machine learning model.
+
+

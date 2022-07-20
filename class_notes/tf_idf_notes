@@ -1,0 +1,14 @@
+tf-idf = term freq * (1/document freq)
+       = term freq * inverse document freq
+       
+tf-idf(t, d, D) = tf(t, d) * idf(t, D)
+
+idf(t, D) = log(|d|/|1 + d in D:t in d|)
+
+tf(t,d) = f_t,d / sqrt(sum of (f_i,d)^2 of i in V)
+t is the term(token)
+d is the document
+f_t,d is the count of term t in doc d
+f_i,d is the count of term i in doc d for all words in the vocabulary V
+
+corpus is a collection of documents

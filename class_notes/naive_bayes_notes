@@ -1,0 +1,38 @@
+Bayes rule (theorem) describes the probability of an event, based on prior
+knowledge of conditions that might be related to the event.
+
+P(A|B) = P(B|A)*P(A)
+         ----------
+            P(B)
+
+P(A|B)-likelihood of event A occuring given B is true.
+P(B|A)-likelihood of event B occuring given A is true.
+P(A) and P(B) - probabilities of observing A and B independently of each other. Known as marginal probability.
+
+The probability of an email being spam given the email’s text is equal to the probability of the email’s text given it is spam, times the probability of any email being spam, divided by the probability of the email’s text.
+
+Priors: The probability that a generic document belongs to each class: P(y_c)
+The priors are the likelihood of each class. Based on the distribution of
+classes in our training set.
+
+Conditional Probabilities (Likelihoods): The probability that each word
+appears in each class: P(w_i|y_c).
+for every word, the count of the number of times it
+appears in each class. We are calculating the probability that a random
+word chosen from an article of class c is word w.
+
+Maximum Likelihood Estimation:
+We need to pull this all together to use these calculations to make a prediction. Here, W is the content of an article and w1, w2, ... , w n are the words that make up the article.
+
+The first probability is the prior, and the remaining come from the Conditional Probabilities (likelihoods). We make the same calculation for each of the 3 classes and choose the class with the biggest probability.
+
+Laplace Smoothing
+What if a word has never appeared before in a document of a certain class?
+The probability will be 0. Since we are multiplying the probabilities, the whole probability becomes 0! We basically lose all information.
+To mitigate this effect, add 1 to the numerator and the number of words in the vocabulary to the denominator.
+This is called Laplace Smoothing and serves to remove the possibility of having a 0 in the denominator or the numerator, both of which would break our calculation.
+
+
+
+
+

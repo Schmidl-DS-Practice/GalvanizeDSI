@@ -1,0 +1,46 @@
+$ docker run --name sparkbook -p 8881:8888 -v "$PWD":/home/jovyan/work jupyter/pyspark-notebook start.sh jupyter lab --LabApp.token=''
+
+docker start sparkbook
+
+docker stop sparkbook
+
+docker exec -it sparkbook bash
+
+sc - spark context
+sc.parallelize - returns an RDD
+
+ACTION:
+.collect() - Return all the elements of the RDD as an array at the driver program.
+.count() - Return the number of elements in the RDD
+.reduce - Reduces RDD using given function
+.take(n) - Return an array with the first n elements of the RDD
+.first() - Return the first element in the RDD
+.saveAsTextFile - save RDD as text file
+.top(n) - get top n elements from a RDD. return the list sorted in desc order
+.sum() - add up elements in RDD
+.mean() - compute the mean of this RDD's elements
+.stdev() - compute the standard deviation of this RDD's elements 
+
+TRANSFORMATION:
+.map(func) - return a new RDD by applying a function to each element of this RDD
+.flatmap(func) - return a new RDD by first applying a function to all elements of this RDD, and the flattening the results
+.filter(func) - return a new RDD containing only the elements that satisfy a predicate
+.sample(withReplacement, fraction, seed) - return a sampled subset of this RDD
+.distinct() - return a new RDD containing the distinct elements in this RDD
+.keys() - return an RDD with the keys of each tuple
+.values() - return an RDD with the values of each typle
+.join(rddB) - return an RDD containing all pairs of elements with matching keys in self and other. EAch pair of elements will be returned as a (k, (v1, v2)) tuple, where(k, v1) is in self and(k, v2) is in other
+.reduceByKey() - merge the values for each key using an associative and commutative reduce function
+.groupByKey() -  merge the values for each key using non-associative opeation, like mean
+.sortBy(keyfun) - sorts this RDD by the given keyfunc
+.sortByKey() - sorts this RDD, which is assumed to consist of (key, value) pairs
+
+rdd.persist() - gives the option to specify the storage level 
+rdd.cache() - uses default storage level MEMORY_ONLY -> other storage levels: MEMORY_AND_DISK, MEMORY_ONLY_SER, MEMORY_AND_DISK_SER, DISK_ONLY
+
+functions for creating an RDD from external source:
+sc.parallelize(array) - create an RDD from a python array or list
+sc.textFile(path) - create an RDD from a text file
+sc.pickleFile(path) - create an RDD from a pickle file
+
+

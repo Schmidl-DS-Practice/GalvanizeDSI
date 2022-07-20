@@ -1,0 +1,60 @@
+breakout 1
+1) owners of male pets
+SELECT owner
+FROM pets
+WHERE gender = 'M';
+
+2) names of dogs
+SELECT name
+FROM pets
+WHERE species = 'dog';
+
+3) names and ages of oldest two pets
+SELECT name, age
+FROM pets
+ORDER BY age DESC
+LIMIT 2;
+
+4) the species of the youngest pet
+SELECT species
+FROM pets
+ORDER BY age
+LIMIT 1;
+
+5) name of cats that are 8 years old or younger
+SELECT name
+FROM pets
+WHERE age <= 8;
+
+6) who owns one or more expensive pets >= 8 years old
+SELECT DISTINCT owner
+FROM pets
+WHERE age >= 8;
+
+breakout 2
+1) owners and number of pets the own
+SELECT owner, COUNT(*)
+FROM pets
+GROUP BY owner;
+
+2) owners and the count of each species o fpet
+SELECT owner, species, COUNT(*)
+FROM pets
+GROUP BY owner, species;
+
+3) count of pets by gender and species
+SELECT gender, species, COUNT(*)
+FROM pets
+GROUP BY species, gender;
+
+4) all owners who own two or more cats
+SELECT owner, COUNT(*) AS num_of_cats
+FROM pets
+WHERE species = 'cat'
+GROUP BY owner
+HAVING COUNT(*) >= 2;
+
+
+
+
+

@@ -1,0 +1,84 @@
+#Week 1: Programming for Data Science
+unix, XXX
+git-intro, XXX
+python-intro, XXX
+oop, XXX
+numpy, XXX
+linear-algebra, XXX
+pandas, XXX
+matplotlib, XXX
+pandas-eda-case-study, XXX
+
+#Week 2: Statistics
+probability-distributions, XXX
+binomial-tests, XXX
+sampling-distributions, XXX
+law-of-large-numbers, XXX
+central-limit-theorem, XXX
+maximum-likelihood, XXX
+hypothesis-testing, XXX
+statistical-power, XXX
+bayes-intro, XXX
+bayes-testing, XXX
+
+#Week 3: Big Data
+docker, XXX
+aws, XXX
+sql, XXX
+sql-python, XXX
+algorithmic-complexity, XXX
+web-scraping, XXX
+spark-rdds, XXX
+spark-dfs, XXX
+spark-case-study, XXX
+
+#Week 5: Supervised Learning and Regression
+knn, XXX
+cross-validation, XXX
+linear-regression-eda, XXX
+predictive-linear-regression, XXX
+regularized-regression, XXX
+logistic-regression, XXX
+gradient-descent, XXX
+decision-rules, XXX
+regression-case-study, XXX
+
+#Week 6: Nonlinear Supervised Learning
+time-series, XXX
+decision-trees, XXX
+random-forests-implementation, XXX
+random-forests-application, XXX
+gradient-boosted-regression, XXX
+gradient-boosted-classification, XXX
+perceptrons, XXX
+recurrent-neural-nets, XXX
+supervised-learning-case-study, XXX
+
+#Week 7: NLP and Unsupervised Learning
+image-processing, XXX
+convolutional-neural-nets, XXX
+nlp, XXX
+text-classification, XXX
+clustering, XXX
+pca, XXX
+svd, XXX
+topic-modeling, XXX
+nlp-case-study, XXX
+
+#Week 9: Advanced Topics 1
+flask, XXX
+graphs-searching, XXX
+time-series-arima, XXX
+latent-dirichlet-allocation, XXX
+content-based-recommenders, XXX
+similarity-based-recommenders, XXX
+factorization-recommenders, XXX
+recommender-case-study, XXX
+
+#Week 10: Advanced Topics 2
+autoencoders, XXX
+transfer-learning, XXX
+multi-armed-bandit, XXX
+reinforcement-learning-with-nn, XXX
+fraud-detection-case-study, XXX
+

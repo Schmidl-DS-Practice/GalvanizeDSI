@@ -1,0 +1,19 @@
+uint8 is an unsigned, 8 bit integer. 2^8 = 256, so uint8 values go from 0 - 255. In a grayscale image, 0 will be black and 255 white. This is the most common format.
+
+uint16 also unsigned, 16 bit. 2^16 = 65536. Twice the memory of a uint8 value.
+
+float a float value (usually 64 bit) between 0-1. 0 black, 1 white.
+
+
+Dealing With Images:
+
+Numpy - this is a standard way to store and work with the image matrix in python.
+
+scikit-image - included with Anaconda it was developed by the SciPy community. It can be used to do many things we will cover shortly.
+
+OpenCV - there is a Python wrapper of OpenCV which is a C++ library for computer vision. It is a very powerful tool as it has several pretrained models in it and the structure to allow training of your own classical image models.
+
+PIL and Pillow - Pillow is supposed to be a user friendly version of PIL which is the Python Imaging Library. It adds image processing capabilities to Python.
+
+LOOK AT SOLUTIONS FOR IMAGE PROCESSING. IT WILL HELP WITH CAPSTONE AND GENERAL:
+Documents/galvanize_dsi/solutions-den18/image-processing

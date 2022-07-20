@@ -1,0 +1,50 @@
+argparse notes:
+
+1)##############################
+
+import numpy as np
+import argparse
+lst = [10, 25, 12, 35, 14, 18, 16, 15, 22, 10, 9]
+def bubble_sort(lst):
+    alist = lst.copy()
+    for i in range(len(alist)-1, 1, -1):
+        for j in range(i):
+            if alist[j] > alist[j+1]:
+                alist[j], alist[j+1] = alist[j+1] , alist[j]
+    return alist
+    
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-d", "--desc", help="""This code performs bubble sort on an input list""")
+    ap.add_argument("-i", "--in", required=True, help="Text file containing words.")
+    ap.add_argument("-o", "--out", required=True, help="Text file containing words.")
+    args = vars(ap.parse_args())
+    input_lst = np.loadtxt(args['in'], dtype=int)
+    output_lst = bubble_sort(input_lst)
+    print(output_lst)
+    np.savetxt(fname=args['out'], X=output_lst, fmt='%s')
+    
+2)##############################
+import argparse
+import numpy as np
+def bubblesort(lst):
+    for i in range(len(lst) - 1, 1, -1):
+        for j in range(i):
+            if lst[j] > lst[j+1]:
+                x = lst[j]
+                lst[j] = lst[j+1]
+                lst[j+1] = x
+    return lst
+    
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-i","--input", type=argparse.FileType('r'), required=True, help="File for input")
+    ap.add_argument("-o","--output", type=argparse.FileType('w'), required=True, help="File for output")
+    args = vars(ap.parse_args())
+    lst_file = np.loadtxt(args.input, dtype=str)
+    out_list = bubblesort(lst_file)
+    #np.savetxt(args['output'], out_list)
+    with open(args.output, 'w') as output_file:
+        output_file.write("%s\n" % item)
+    
+  

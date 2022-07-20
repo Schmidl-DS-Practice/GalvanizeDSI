@@ -1,0 +1,116 @@
+1. Consider a corpus made up of the following four documents:
+
+    Doc 1: Dogs like dogs more than cats.
+    Doc 2: The dog chased the bicycle.
+    Doc 3: The cat rode in the bicycle basket.
+    Doc 4: I have a fast bicycle.
+
+    We assume that we are lowercasing everything, stemming and removing stop 
+    words and punctuation. These are the features you should have:
+
+    ```dog, like, cat, chase, bicycle, ride, basket, fast```
+
+
+    * What is the term frequency vector for Document 1 (2 pts)?
+
+      doc1_tf = [2, 1, 1, 0, 0, 0, 0, 0]
+
+    * What is the document frequency vector for all the words in the corpus (1 pt)?
+
+      doc_freq = [2, 1, 2, 1, 3, 1, 1, 1]
+
+
+2. Describe the process of varying K in K-means.  Contrast this with the process
+   of varying K in the hierarchical clustering setting.  
+
+
+   In K-means, you first choose a K. One way to find which K is optimal is to 
+   increase K until you reach an elbow point in the plot of within-cluster variation
+   against the number of clusters. One could also use the GAP statistic or compute
+   the silhouette coefficient for each K.  The GAP statistic is explicit about 
+   how to choose K.  The silhouette coefficient is less explicit (see lecture notes).  
+  
+   In hierarchical clustering, unlike K-means, you don't have to choose a K a 
+   priori. You can cut your dendrogram at various  points, corresponding to different
+   K, and then use any of the methods above to measure how good K is.  A single
+   dendrogram provides choices of K=1 up to K=n.
+
+
+3. In PCA utilizing eigen-decompostion, explain:
+   
+   a) How the principal components are calculated? (2 pts.)
+
+   Principal components can be calculated using eigen-decomposition or with SVD.
+   In the case of eigen-decomposition, the principal components are eigenvectors
+   of the covariance/correlation matrix.  In the case of SVD, the matrix 
+   factorization M = USV results in three matrices, where the product of the
+   first two (U and S) form the principal components.
+
+   b) How to calculate the proportion of total variance explained by one principal
+      component? (1 pt.)
+
+   The variance explained by one component is its eigenvalue divided by the sum
+   of all the eigenvalues.
+
+
+4. The matrix below shows nutritional values for 5 food items.
+    
+                -------------------------------------------------------
+                | Apple | Banana | Bell Pepper | Blue Crab | Broccoli |
+   --------------------------------------------------------------------
+   |Calories    |  130  |   110  |      25     |    100    |     45   |
+   --------------------------------------------------------------------
+   |Sodium      |    0  |     0  |      40     |    330    |     80   |
+   --------------------------------------------------------------------
+   |Potassium   |  260  |   450  |     220     |    300    |    460   |
+   --------------------------------------------------------------------
+   |Carbohydrate|   34  |    30  |       6     |      0    |      8   |
+   --------------------------------------------------------------------
+   |Vitamin A   |    2  |     2  |       4     |      0    |      6   |   
+   --------------------------------------------------------------------
+   |Vitamin C   |    8  |    15  |     190     |      4    |    220   |  
+   --------------------------------------------------------------------
+
+   Using sklearn's NMF class in its decomposition library:
+
+   a) Provide code that would factorize this matrix into W and H matrices.  
+   Paste the code into the space below.  Some starter code is provided (2 pts).
+
+   # starter code
+   import numpy as np
+   from sklearn.decomposition import NMF
+
+   nut_vals=np.array([[130, 110,  25, 100,  45],
+                      [  0,   0,  40, 330,  80],
+                      [260, 450, 220, 300, 460],
+                      [ 34,  30,   6,   0,   8],
+                      [  2,   2,   4,   0,   6],
+                      [  8,  15, 190,   4, 220]])
+   # your code below
+   model = NMF(n_components=3, init='random', random_state=0)
+   W = model.fit_transform(nut_vals)
+   H = model.components_
+
+   b) Describe why you used the number of latent topics you did in your NMF. (1 pt)
+
+   Answers will vary.  An arguable answer is that inspection of the table above shows
+   three groups (fruit, vegetables, meat) and so 3 was tried.  A more systematic
+   approach is shown in nutritional_value.py where the reconstruction error
+   was calculated for a range of components, and 3 components were
+   in the "elbow" of low reconstruction error.
+
+
+5. In the NMF described in question 4:   
+   a) How would you check if the number of latent topics you picked was appropriate? (2 pts)
+
+   Through matrix reconstruction error. As the number of latent topics increases reconstruction
+   error will go down, but an "elbow" may occur that indicates that particular number of
+   latent topics decreases reconstruction error by a large amount, and diminishing returns
+   occur with more latent topics.  See nutritional_value.py.
+
+   b) In the case of these nutritional values, why might NMF be more appropriate matrix
+      factorization model than SVD? (1 pt)
+
+   There is no such thing as a negative nutritional value.  It makes sense that nutritional
+   topics should be composed of linear additions (not subtractions) of nutritional values.
+

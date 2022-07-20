@@ -1,0 +1,104 @@
+# Mongo
+a) In terms of organization of the data in the database, how are Mongo and
+SQL different?  (2 pts)
+
+SQL is relational, so it has a defined schema. The schema makes sure that
+all the data in a column in a table has the same type - all the dates are dates,
+all the numbers are either floats or ints, etc. 
+
+Mongo is *not* relational, it's a NoSQL database where the structure of the data is 
+defined for each document, but not for the table.
+
+
+b) Give an example of data that is likely better handled by Mongo than SQL.
+(1 pt)
+
+Data whose structure changes rapidly is better handled in Mongo than SQL. 
+Web pages change frequently, so data obtained from web-scraping is likely better
+handled by Mongo.
+
+
+#Big Data
+
+What is Big Data?
+
+- Data so large that it cannot be stored on one machine.
+ - Can Be...
+    * Structured: highly organized,
+    searchable, fits into relational
+    tables
+    *  Unstructured: no predefined format,
+    multiple formats
+ - Often described as 3 Vs: (high volume, velocity, and variety)
+
+#Spark
+What is an RDD in Spark?  How is a Spark Dataframe different?
+
+A Resilient Distributed Dataset (RDD) is a fundamental data structure in Spark.
+It is an immutable distributed collection of objects. They can be created from 
+HDFS, S3, HBase, JSON, text etc. They are fault tolerant and can recover from 
+errors (node failure, slow processes) through the DAG (Directed Acyclic Graph).
+Spark Dataframes, as they are built on top of RDDs, are also immutable and lazily
+evaluated. Dissimilar to RDDs, spark dataframes have a defined schema, which is 
+just metadata about your data making your data more structured, enabling performance
+enhancements. This also allows you to use SQL-like syntax, unlike RDDs.
+
+
+What is Lazy Evaluation in Spark and why does it occur?
+
+Lazy evaluation means that the execution will not begin until the action is 
+triggered. For Spark RDDs, there are two types of operations: 1. Transformations
+and 2. Actions. In terms of Spark, transformations do not occur until absolutely
+necessary (i.e, when an action is called). Spark constructs a sequence of 
+transformations into a Directed Acyclic Graph (DAG). Once completed, it is sent 
+for execution to the cluster manager. Lazy evaluation allows Spark to make 
+optimization decisions with the entire completed DAG. If each transformation was
+executed on command, this would not be possible.
+
+# Big O - (Order of computations)
+Estimate the running time for the following functions (1pt each):
+
+a)
+def f(n):
+    i = 0
+    while i < n:
+        j = 0
+        while j < n:
+            print(str(i) + ", " + str(j))
+            j += 1
+        i += 1
+
+O(n) = n^2
+
+b)
+def f(n):
+    i = 1
+    while i < n:
+        i *= 2
+        print(i)
+
+O(n) = log(n)
+
+To prove this, you can plot the number of loops it takes relative to the size of n...
+import matplotlib.pylab as plt
+    def f(n):
+        times = 0
+        i = 1
+        while i < n:
+            times += 1
+            i *= 2
+        return times
+    li = []
+    for i in range(1000):
+        li.append(f(i))
+    plt.plot(range(1000), li)
+    plt.plot(np.array(range(1000)), np.sqrt(np.array(range(1000))))
+    plt.plot(np.array(range(1000)), np.log2(np.array(range(1000))))
+    plt.legend(['true values', 'sqrt', 'log'], loc='upper left')
+    plt.show()
+
+c)
+def do_something_else(n):
+    print("My name is Inigo Montoya")
+O(n) = 1
+

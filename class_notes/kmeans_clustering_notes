@@ -1,0 +1,73 @@
+K-MEAN CLUSTERING ALGORITHM:
+1. Randomly assign each data point to a cluster.
+-while cluster assignments change-
+2a) Compute the centroid of each cluster.
+2b) Reassign each point to belong to the nearest cluster.
+
+CENTROID INITIALIZATION METHODS:
+1) (Simplest) Randomly choose k points from your data and make those
+your initial centroids
+2) Randomly assign each data point to a number 1-k and initialize the kth
+centroid to the average of the points with the kth label.
+3) k-means++ chooses well spread initial centroids. First centroid is chosen
+at random, with subsequent centroids chosen with probability proportional to
+the squared distance to the closest existing centroid. This is the default
+initialization in sklearn.
+
+STOPPING CRITERIA:
+1) A specified number of iterations (sklearn default : max_iter= 1000)
+2) Until the centroids don’t change at all
+3) Until the centroids don’t move by very much (sklearn default : tol= .0001)
+
+K-MEANS CONVERGENCE:
+Values vary because initializations are random, and so are only guaranteed to find local minima.
+Need to run several times (or k-means++ - show algorithm)
+
+subset = features[lables==1]
+mean = subset.mean(axis=0)
+np.linalg.norm(features - mean, axis=1)
+
+SILHOUETTE SCORE:
+The Silhouette Coefficient is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample
+(b - a) / max(a, b)
+*only defined for 2 <= k < n
+Values range from -1 to 1, with 1 being optimal and -1 being the worst
+http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html#sklearn.
+metrics.silhouette_score
+
+K-MEANS ASSUMPTIONS:
+- Picked the “correct” k
+- Clusters have equal variance
+- Clusters are isotropic (variance spherical)
+- Clusters do NOT have to contain the same number of observations
+http://scikit-learn.org/stable/auto_examples/
+cluster/plot_kmeans_assumptions.html
+
+PRACTICAL CONSIDERATIONS:
+K-means is not deterministic -> falls into local minima. Should restart
+multiple times and take the version with the lowest within-cluster variance
+(sklearn does multiple initializations by default)
+• Susceptible to curse of dimensionality
+• One hot encoded categorical can overwhelm - look into k-modes
+(https://pypi.python.org/pypi/kmodes/)
+• Try MiniBatchKMeans for large datasets (finds local minima, so be careful)
+
+DBSCAN ALGORITHM:
+Also computes clusters using distance metric, but decides the number of
+clusters for you
+• With K-Means, you choose k - this is your main hyper-parameter
+• With DBScan, your main hyper-parameter is eps, which is the maximum
+distance between two points that are allowed to be in the same
+‘neighborhood’
+
+HIERARCHICAL CLUSTERING:
+Another clustering method (creating groups through hierarchies)
+Don’t have to commit to a value of k beforehand
+Results don’t depend on initialization
+Not limited to euclidean distance as the similarity metric
+Easy visualized through dendrograms
+“Height of fusion” on dendrogram quantifies the separation of clusters
+
+
+
+

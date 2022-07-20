@@ -1,0 +1,4 @@
+ALL DATA —> X (predictors) and y (targets) 
+X, y —> X_train, y_train (training) and X_test, y_test (testing)
+
+

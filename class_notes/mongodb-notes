@@ -1,0 +1,45 @@
+docker start mongoserver
+docker exec -it mongoserver bash
+mongo
+show dbs
+use example_database(if does not exist, will create one)
+
+Databases > Collections(tables) > Documents(row)
+
+to work in python:
+
+from pymongo import MongoClient # Import pyMongo and initialize the client
+client = MongoClient('localhost', 27017) # Import pyMongo and initialize the client
+db = client['example_database'] # Specify our database
+collection = db['example_collection'] # Specify our collection
+
+
+Command: About
+
+help: Show help
+
+show dbs: Show databases
+
+use <db>: Switch to database, create if non-existent
+
+show collections: Show collections in database
+
+db.collection.insertOne(): Inserts a document into a collection.
+
+db.collection.insertMany(): Inserts multiple documents into a collection.
+
+db.collection.find(): Selects documents in a collection based on the filter and returns a cursor to the selected documents.
+
+db.collection.updateOne(): Updates a single document within the collection based on the filter.
+
+db.collection.updateMany(): Updates all documents within the collection that match the filter.
+
+db.collection.replaceOne(): Replaces a single document within the collection based on the filter.
+
+db.collection.deleteOne(): Removes a single document from a collection based on the filter.
+
+db.collection.deleteMany(): Removes all documents that match the filter from a collection.
+
+.limit()
+
+.pretty()

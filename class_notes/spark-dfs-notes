@@ -1,0 +1,53 @@
+actions:
+.show(n) or .head(n) - to get first n rows (use .show)
+.printSchema() - schema of table, like df.info() in pandas
+.collect() - same as RDDs, but is ugly. use .show()
+.sum(), .count(), .min(), .max(), etc.
+
+.describe() - computes statistics for numerica and string columns
+.sample() and .sampleBy() - subsets of data for easier development
+
+http:/spark.apache.org/docs/latest/api/python/pyspark.sql.html - doc
+
+df.filter('').groupby('').agg('':'') - python api
+df.createOrReplaceTempView('df')
+new_df = spark.sql('''SELECT ... FROM df WHERE ... GROUP BY...''') - SQL
+
+import pyspark.sql.functions as F - import to use abs value
+DF API - .select('', F.abs(''),alias(''))
+
+SQL - df.registerTempTable('df')
+spark.sql('''SELECT col1, ABS(col2) AS ... FROM df...''')
+
+SQL built-in:
+
+math - round, floor/ciel, trig func, expon, log, factorial...
+agg - count, average, min, max, first, last, collect_set, collect_list... 
+datetime manips - change timezone, change string/datetime/unix time
+hasing func
+string manips - concates, slicing
+datatype manips - array certain columns together, cast to change datatype
+
+from pyspark.sql.functions import udf - user defined function
+from pyspark.sql.types import * - import the many datatypes
+
+df.withCol('new_col', udf_foo(df.old_col))
+
+from pyspark.sql.window import import window
+from pyspark.sql.functions as f
+windowSpec = Window.partitionBy().orderBy().rangeBetween()
+
+http://spark.apache.org/docs/latest/api/python/pyspark.sql.html#module-pyspark.sql.functions
+
+http://spark.apache.org/docs/latest/api/python/pyspark.sql.html#module-pyspark.sql.functions
+
+https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html
+
+df = spark.read.csv('file', head=True #user headers or not#, quote='"' #char for quotes#, sep="," #char for separation#, inferSchema=True #do we infer schema or not#
+
+spark.read.json to load JSON file in to DF
+
+.toPandas() - convert Df into Pandas DF
+
+from pyspark.sql.functions import lit
+

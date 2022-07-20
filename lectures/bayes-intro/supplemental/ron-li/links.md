@@ -1,0 +1,1 @@
+link to [lecture note](https://docs.google.com/presentation/d/1KKFL3POp0ON1WecMglWRSiBRLgic-_zvd6d1YE_aerY/edit?usp=sharing).

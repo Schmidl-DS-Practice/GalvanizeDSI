@@ -1,0 +1,2 @@
+https://christophm.github.io/interpretable-ml-book/pdp.html
+https://www.kaggle.com/dansbecker/partial-dependence-plots

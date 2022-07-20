@@ -1,0 +1,14 @@
+repos/logistic-regression/data/mooc.csv
+repos/matplotlib/data/baseball-csvs/gamelogs.csv
+solutions-den18/pca/data/book_meta.csv
+repos/svd/data/book_meta.csv
+lectures/latent-dirichlet-allocation/frank-burkholder/data/abcnews-date-text.csv
+repos/pandas/data/hospital-costs.csv
+repos/sql-python/data/socialmedia.sql
+repos/nlp/data/articles_mongoimport.json
+*mp4
+lectures/topic-modeling/kayla-thomas/lecture_lda/data/abcnews-date-text.csv
+repos/sql/data/socialmedia.sql
+solutions-den18/nlp/data/articles_mongoimport.json
+solutions-den18/nlp/data/articles_mongoimport.txt
+solutions-den18/svd/data/book_meta.csv

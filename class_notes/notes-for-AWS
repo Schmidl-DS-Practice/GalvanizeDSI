@@ -1,0 +1,26 @@
+EC2 = CPU 
+S3 = Hard drive 
+EBS = memory
+
+launch EC2 instance:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html
+
+services-EC2-launch instance-search:ubuntu anaconda3-pick conda 3.5 ubuntu16-t2 micro-next configure instance details-(create new IAM role-create role-aws service-ec2-search permissions s3-amazons3fullaccess-role name:'some name'-create role)-pick IAM role-create new key pair-dl key pair
+
+
+modify file permissions in .ssh folder:
+chmod (everyone to rwe, 4(read)+2(write)+1(execute),(modify values depending on who gets permissions)) 777 'file name.pem'
+
+connect to EC2 instance using ssh:
+ssh -i /path/mykeypair.pem myinstanceusername(ubuntu@publicdns)
+
+scp(secure copy) -i ~ssh...
+
+prevent script from stop in EC2:
+screen -S my-session(give it a name)
+Ctrl -a, then d(to detach)
+screen -ls (to check session running)
+screen -r my_session(to view session)
+
+Boto 3:
+
