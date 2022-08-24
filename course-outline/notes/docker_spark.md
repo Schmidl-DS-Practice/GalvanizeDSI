@@ -40,8 +40,7 @@ import random
 
 spark = (ps.sql.SparkSession.builder
         .appName("sandbox")
-        .getOrCreate()
-        )
+        .getOrCreate())
 
 sc = spark.sparkContext
 
