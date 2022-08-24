@@ -37,7 +37,7 @@ SELECT owner, COUNT(*)
 FROM pets
 GROUP BY owner;
 
-2) owners and the count of each species o fpet
+2) owners and the count of each species of pet
 SELECT owner, species, COUNT(*)
 FROM pets
 GROUP BY owner, species;

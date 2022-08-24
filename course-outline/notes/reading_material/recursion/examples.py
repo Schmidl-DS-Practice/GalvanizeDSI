@@ -73,7 +73,7 @@ if __name__ == '__main__':
     t2.left.left = TreeNode(4)
     t2.right.left = TreeNode(5)
 
-    print find_maximum(t1)    # 4
-    print find_maximum(t2)    # 5
-    print equals(t1, t2)      # False
-    print get_height(t1)      # 3
+    print(find_maximum(t1))    # 4
+    print(find_maximum(t2))    # 5
+    print(equals(t1, t2))      # False
+    print(get_height(t1))      # 3
