@@ -10,10 +10,10 @@ $ docker run --name sparkbook -p 8881:8888 -v "$PWD":/home/jovyan/work jupyter/p
 - this will take a while to download the first time you run it
 - here I've given this container the name `sparkbook`. You can call it whatever you like.
 - the `-p` flag is exposing port `8881`, so as not to collide with any other notebooks you have running.
-- the `-v` flag connects the filesystem in the container to your computer's filesystem. See the documentation for [docker volumes](https://docs.docker.com/storage/volumes/). 
-  - Here, the container's folder `/home/jovyan/work` will be mapped to whichever folder you ran the `docker run` command from (`$PWD`). If you want to make your entire home folder visible to the docker container, navigate to `~` before running the above command. If you only want the container to see, say, a folder you cloned from github, navigate to `/path/to/repo_folder` first. Then you can **make changes from inside the container** and **run git commands outside the container** 
+- the `-v` flag connects the filesystem in the container to your computer's filesystem. See the documentation for [docker volumes](https://docs.docker.com/storage/volumes/).
+  - Here, the container's folder `/home/jovyan/work` will be mapped to whichever folder you ran the `docker run` command from (`$PWD`). If you want to make your entire home folder visible to the docker container, navigate to `~` before running the above command. If you only want the container to see, say, a folder you cloned from github, navigate to `/path/to/repo_folder` first. Then you can **make changes from inside the container** and **run git commands outside the container**
 - `start.sh` is a script in the container that allows for notebook configuration
-- `--LabApp.token=''` turns off secured access. Remove this flag if you are ever doing anything serious. 
+- `--LabApp.token=''` turns off secured access. Remove this flag if you are ever doing anything serious.
 - If you want to run the server in the background, add the docker flag `-d` to the above command
 
 To stop the container, type in a different terminal window
@@ -48,13 +48,13 @@ sc = spark.sparkContext
 random.seed(1)
 
 def sample(p):
+
     x, y = random.random(), random.random()
     return 1 if x*x + y*y < 1 else 0
 
 count = (sc.parallelize(range(0, 10000000))
            .map(sample)
-           .reduce(lambda a, b: a + b)
-        )
+           .reduce(lambda a, b: a + b))
 
 print("Pi is (very) roughly {}".format(4.0 * count / 10000000))
 ```
