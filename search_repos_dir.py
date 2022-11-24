@@ -3,7 +3,7 @@ from glob import glob
 
 PATH = "~/Documents/SchoolDocs/Schmidl-DS-Practice/GalvanizeDSI/repos"
 
-# this counter how many repos had .git in them
+# this count how many repos had .git in them
 # print(sum(1 for _, dirnames, _ in os.walk("repos") if ".git" in dirnames))
 
 # this worked to remove the .git directory from this dir
